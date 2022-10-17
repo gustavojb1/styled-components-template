@@ -1,11 +1,12 @@
 import Estudante from "./Estudante";
+import {BotaoApresenta, TurmaContainer}  from "./TurmaStyled"
 
 function Turma(props) {
   return (
-    <div>
+    <TurmaContainer>
       <h1>Turma {props.turma}</h1>
       <h4>Responsável:{props.responsavel}</h4>
-      <button onClick={props.apresentar}>Apresentar</button>
+      <BotaoApresenta onClick={props.apresentar}>Apresentar</BotaoApresenta>
 
       <Estudante
         nome={"Clarinha"}
@@ -31,7 +32,7 @@ function Turma(props) {
         corDaRoupa={"amarelo"}
         criadoPor={props.responsavel}
       />
-    </div>
+    </TurmaContainer>
   );
 }
 
